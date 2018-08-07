@@ -8,9 +8,10 @@
         <% else %>
           <input type="checkbox" name="task" value="task.title"><%= link_to task.title, task_show_path(task) %><br>
         <% end %>
-        <%= link_to "delete", task_destroy_path(task),
-          method: :delete,
-          data: { confirm: "Are you sure?"} %>
+
+          <%= link_to raw('<i class="far fa-trash-alt"></i>'), task_destroy_path(task),
+            method: :delete,
+            data: { confirm: "Are you sure? You want to delete task: #{task.title}?" } %>
       </li>
 
     <% end %>
