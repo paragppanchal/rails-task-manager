@@ -1,0 +1,13 @@
+<%= form_for(task, url: task_update_path) do |t| %>
+  <%= t.label :title %>
+  <%= t.text_field :title %>
+
+  <%= t.label :details %>
+  <%= t.text_field :details %>
+
+  <%= t.label :completed %>
+  <%= t.check_box :completed %>
+
+  <%= t.submit "Update"%>
+
+<% end %>
